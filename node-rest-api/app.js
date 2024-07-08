@@ -19,5 +19,4 @@ app.get("/status", (request, response) => {
         "Status": "Running"
     };
     response.send(status);
-    console.log("Response Sent.");
 });
