@@ -13,10 +13,12 @@ router.get("/healthcheck/status", (req, res) => {
 // Defining an Endpoint for Registering a New User
 router.post("/signup", (req, res) => {
     if (!payload.user) {
-        const status = {
-            "Status" : "400 Bad Request"
-        };
-        res.send(status);
+        res.status(400).json({
+            status: false,
+            error: {
+                message: 'Bad Request. Not able to Register User with the provided Credentials.',
+            },
+        })
     };
     const user = payload.user
     req.send(user);
@@ -26,5 +28,8 @@ router.post("/signup", (req, res) => {
     };
     res.send(status);
 });
+//  Defining Route to Login
+
+
 
 module.exports = router;
