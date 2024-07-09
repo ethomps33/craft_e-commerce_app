@@ -1,0 +1,23 @@
+[
+    {
+    "id": 1,
+    "name": "Evann Goel",
+    "age": 29,
+    "email": "e.thomps33@gmail.com",
+    "role": "admin"
+    },
+    {
+    "id": 2,
+    "name": "Rari",
+    "age": 9,
+    "email": "rari_da_pup@dogs.com",
+    "role": "user"
+    },
+    {
+    "id": 3,
+    "name": "Mochi",
+    "age": 4,
+    "email": "mochi_thee_kitty@cats.com",
+    "role": "user"
+    }
+]
