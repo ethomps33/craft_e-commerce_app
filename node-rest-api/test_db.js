@@ -12,11 +12,15 @@ async function main(){
     const client = new MongoClient(url);
     await client.connect(); // Added await to hold processing until client.connect() comes back.
 
-    // const results = await UserRepo.loadData(data);
+    // Loads Data from Users.json using loadData() from userRepo.js
+    const results = await UserRepo.loadData(data);
+    console.log(results.insertedCount, results.ops);
+    const admin = client.db(dbName).admin();
 
     // Check to see if DB Server up and Running
-    const admin = client.db(dbName).admin();
     // console.log(await admin.serverStatus());
+
+    // Returns a list of the DBs for this MongoDB Connection
     console.log(await admin.listDatabases());
 
 }
